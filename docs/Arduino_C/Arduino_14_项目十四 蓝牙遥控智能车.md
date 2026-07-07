@@ -112,17 +112,17 @@ void back() { //小车后退
 
 void turnL() { //小车左转
   matrix_display(left);  //显示左转的图案
-  digitalWrite(MA, HIGH); //电机A逆时针转
+  digitalWrite(MA, LOW); //电机A顺时针转
   analogWrite(PWMA, 200); //电机A速度为200
-  digitalWrite(MB, LOW); //电机B逆时针转
+  digitalWrite(MB, HIGH); //电机B顺时针转
   analogWrite(PWMB, 200); //电机B速度为200
 }
 
 void turnR() { //小车右转
   matrix_display(right);  //显示右转的图案
-  digitalWrite(MA, LOW); //电机A正转
+  digitalWrite(MA, HIGH); //电机A逆时针转
   analogWrite(PWMA, 200); //电机A速度为200
-  digitalWrite(MB, LOW); //电机B反转
+  digitalWrite(MB, LOW); //电机B逆时针转
   analogWrite(PWMB, 200); //电机B速度为200
 }
 
